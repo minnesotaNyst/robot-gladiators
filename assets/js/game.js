@@ -2,6 +2,10 @@
 var playerName = window.prompt("What is your robot's name?");
 //default the players health to 100 and assign it to a variable that we can call later in the js file
 var playerHealth = 100;
+// check to see if the value of the playerHealth variable is greater than 0
+if (playerHealth > 0) {
+    console.log("Your player is still alive!");
+  }
 //default the player to have ten attack points and assign it to a variable that we can call later in the js file
 var playerAttack = 10;
 
@@ -31,6 +35,20 @@ var fight = function() {
     console.log(
         enemyName + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
       );
+      // check enemy's health
+if (enemyHealth <= 0) {
+    window.alert(enemyName + " has died!");
+  } 
+  else {
+    window.alert(enemyName + " still has " + enemyHealth + " health left.");
+  }
+  // check player's health
+if (playerHealth <= 0) {
+    window.alert(playerName + " has died!");
+  } 
+  else {
+    window.alert(playerName + " still has " + playerHealth + " health left.");
+  }
 
   };
 
